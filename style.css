@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+:root{
+    --omaps-color1: #EAEAEA;
+    --omaps-color2: #EA6E4B;
+    --omaps-color3: white;
+    --main-text-color: white;
+    --box-text-color: black;
+}
+body{
+    background-color: var(--omaps-color2);
+    color: var(--main-text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Dosis', sans-serif;
+
+}
+.logo{
+    text-align: center;
+    padding: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--omaps-color3);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 10px;
+}
+.datain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 28vh;
+}
+.datain input{
+    text-align: center;
+    font-size: 22px;
+    padding: 5px;
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--omaps-color3);
+    border-bottom: solid 2px var(--omaps-color3);
+}
+.datain input::placeholder{
+    font-size: 22px;
+    color:  rgb(253, 156, 129);
+}
+#btn{
+    background-color: var(--omaps-color2);
+    border: solid 2px var(--omaps-color3);
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    color: var(--main-text-color);
+}
+.info{
+    border: 2px solid var(--omaps-color2);
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    background-color: var(--omaps-color3);
+    color: var(--omaps-color2);
+    border-radius: 25px;
+}
+#temp{
+    grid-column: 1/3;
+    grid-row: 1/3;
+    font-size: 70px;
+}
+#weather{
+    grid-row: 1/3;
+    font-size: 30px;
+}
+
+#humidity{
+    grid-column: 1/4;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+}
+#name{
+    grid-column: 1/4;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
