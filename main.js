@@ -17,7 +17,7 @@ function print() {
 
     let info = response.name + " / " + response.sys.country;
     let a = response.weather[0].icon;
-    let imgurl = "http://openweathermap.org/img/wn/" + a + "@2x.png";
+    let imgurl = "https://openweathermap.org/img/wn/" + a + "@2x.png";
     xTemp.innerHTML = Math.floor(response.main.temp) + "°C";
     xWeatherImg.setAttribute('src', imgurl);
     xWeatherDesc.innerHTML = response.weather[0].main;
