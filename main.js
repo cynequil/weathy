@@ -11,7 +11,7 @@ function print() {
         alert("Input Both Pincode & Country Code");
         return;
     }
-    let url = "http://api.openweathermap.org/data/2.5/weather?zip=" + pin + "," + ccode + "&APPID=710b59cc56adbbf39097008782d7c12d&units=metric";
+    let url = "https://api.openweathermap.org/data/2.5/weather?zip=" + pin + "," + ccode + "&APPID=710b59cc56adbbf39097008782d7c12d&units=metric";
     const response = JSON.parse(Get(url));
     console.log(response);
 
