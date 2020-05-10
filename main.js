@@ -18,14 +18,16 @@ function print() {
     let info = response.name + " / " + response.sys.country;
     let a = response.weather[0].icon;
     let imgurl = "https://openweathermap.org/img/wn/" + a + "@2x.png";
-    xTemp.innerHTML = Math.floor(response.main.temp) + "°C";
+    xTemp.innerHTML = Math.floor(response.main.temp) + "<span id='unit'>°C</span>";
+    xTempFeels.innerText = "Feels like: " + Math.floor(response.main.feels_like) + "°C";
     xWeatherImg.setAttribute('src', imgurl);
     xWeatherDesc.innerHTML = response.weather[0].main;
     xHumidity.innerHTML = "Humidity: " + response.main.humidity + "%";
     xName.innerHTML = info;
 }
 
-let xTemp = document.getElementById('temp');
+let xTemp = document.getElementById('actual');
+let xTempFeels = document.getElementById('feels');
 // let xWeather = document.getElementById('weather');
 let xWeatherImg = document.getElementById('weather-img');
 let xWeatherDesc = document.getElementById('weather-desc');

@@ -6,16 +6,16 @@
     outline: none;
 }
 :root{
-    --omaps-color1: #EAEAEA;
+    --omaps-color1: rgb(211, 211, 211);
     --omaps-color2: #EA6E4B;
     --omaps-color3: white;
     --main-text-color: white;
     --box-text-color: black;
 }
 body{
-    background-color: var(--omaps-color2);
+    background-color: var(--omaps-color3);
     color: var(--main-text-color);
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Dosis', sans-serif;
 
 }
@@ -25,7 +25,7 @@ body{
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     font-size: 40px;
-    color: var(--omaps-color3);
+    color: var(--omaps-color2);
 }
 .container{
     display: flex;
@@ -50,12 +50,12 @@ body{
     padding: 5px;
     border: none;
     background-color: var(--bg-color);
-    color: var(--omaps-color3);
-    border-bottom: solid 2px var(--omaps-color3);
+    color: var(--omaps-color2);
+    border-bottom: solid 2px var(--omaps-color2);
 }
 .datain input::placeholder{
     font-size: 22px;
-    color:  rgb(253, 156, 129);
+    color:  rgb(206, 206, 206);
 }
 #btn{
     background-color: var(--omaps-color2);
@@ -67,35 +67,62 @@ body{
     color: var(--main-text-color);
 }
 .info{
-    border: 2px solid var(--omaps-color2);
-    height: 50vh;
+    /* border: 2px solid var(--omaps-color2); */
+    height: 48vh;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     align-items: center;
-    background-color: var(--omaps-color3);
+    /* background-color: var(--omaps-color3); */
+    /* background-color: rgb(85, 241, 92); */
     color: var(--omaps-color2);
+    /* color: rgb(0, 0, 0); */
     border-radius: 25px;
     z-index: -100;
+    font-weight: bold;
+}
+.info > div{
+    /* outline: 2px solid black; */
 }
 #temp{
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row: 1/3;
+    /* height: 22vh; */
+    /* padding-right: 20px; */
+}
+#actual{
     font-size: 70px;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 15px;
+}
+#unit{
+    font-size: 40px;
+}
+#feels{
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    text-align: left;
+    padding: 15px;
+    padding-left: 15px;
 }
 #weather{
+    grid-column: 3/5;
     grid-row: 1/3;
-    font-size: 30px;
+}
+#weather-desc{
+    font-size: 15px;
+    letter-spacing: 1.5px;
 }
 
 #humidity{
-    grid-column: 1/4;
-    font-size: 25px;
-    font-weight: bold;
+    grid-column: 1/5;
+    font-size: 22px;
+    letter-spacing: 2px;
     padding: 10px;
 }
 #name{
-    grid-column: 1/4;
+    grid-column: 1/5;
     padding: 10px;
-    font-weight: bold;
-    font-size: 22px;
+    letter-spacing: 2.2px;
+    font-size: 20px;
 }
