@@ -13,7 +13,7 @@
     --box-text-color: black;
 }
 body{
-    background-color: var(--omaps-color3);
+    background-color: var(--omaps-color1);
     color: var(--main-text-color);
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Dosis', sans-serif;
@@ -21,10 +21,16 @@ body{
 }
 .logo{
     text-align: center;
-    padding: 15px;
+    padding: 10px;
+    margin-top: 5px;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 45px;
+    color: var(--omaps-color2);
+    color:black;
+    outline: solid 2px black;
+}
+#letter-logo{
     color: var(--omaps-color2);
 }
 .container{
@@ -32,22 +38,26 @@ body{
     flex-direction: column;
     /* height: 80vh; */
     outline: solid white 2px;
-    width: 85%;
-    margin: 0 auto;
+    width: 65%;
+    margin: 10px auto;
     justify-content: space-between;
     text-align: center;
     padding: 0 10px;
+    outline: solid 2px red;
 }
 .datain{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 28vh;
+    /* height: 28vh; */
+    outline: solid black 2px;
+    margin: 10px 0;;
 }
 .datain input{
     text-align: center;
-    font-size: 22px;
+    font-size: 25px;
     padding: 5px;
+    margin: 5px 0;
     border: none;
     background-color: var(--bg-color);
     color: var(--omaps-color2);
@@ -59,7 +69,8 @@ body{
 }
 #btn{
     background-color: var(--omaps-color2);
-    border: solid 2px var(--omaps-color3);
+    /* border: solid 2px var(--omaps-color3); */
+    border: none;
     border-radius: 25px;
     font-size: 20px;
     padding: 10px;
@@ -67,8 +78,10 @@ body{
     color: var(--main-text-color);
 }
 .info{
-    /* border: 2px solid var(--omaps-color2); */
-    height: 48vh;
+    outline: 2px solid blue;
+    /* height: 48vh; */
+    margin-bottom: 10px;
+    padding: 5px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     align-items: center;
@@ -81,7 +94,7 @@ body{
     font-weight: bold;
 }
 .info > div{
-    /* outline: 2px solid black; */
+    outline: 2px solid yellow;
 }
 #temp{
     grid-column: 1/4;
@@ -125,4 +138,10 @@ body{
     padding: 10px;
     letter-spacing: 2.2px;
     font-size: 20px;
+}
+
+@media (max-width: 500px){
+    .container{
+        width: 85%;
+    }
 }
