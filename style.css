@@ -30,7 +30,8 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    /* height: 80vh; */
+    outline: solid white 2px;
     width: 85%;
     margin: 0 auto;
     justify-content: space-between;
@@ -74,6 +75,7 @@ body{
     background-color: var(--omaps-color3);
     color: var(--omaps-color2);
     border-radius: 25px;
+    z-index: -100;
 }
 #temp{
     grid-column: 1/3;
