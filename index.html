@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weathy: Simple Weather App</title>
+    <title>Weathy: Minimal Weather App</title>
     <link rel="stylesheet" href="./style.css">
     <script defer src="./main.js"></script>
 </head>
 
 <body>
-    <div class="logo">Weathy</span></div>
+    <div class="top">
+        <div class="logo">Weathy</div>
+        <div class="desc">Minimal Weather App</div>
+    </div>
     <div class="container">
         <div class="datain">
             <input type="text" inputmode="decimal" id="pincode" value="" placeholder="Pincode Ex: 110001">
@@ -28,9 +31,11 @@
             </div>
             <div id="humidity">~%</div>
             <div id="name">~/~</div>
+            <div id="api">Powered By <a href="https://openweathermap.org/" id="open">OpenWeatherMap</a></div>
         </div>
-        <div id="api">Powered By <span id="open">OpenWeatherMap</span></div>
     </div>
 </body>
+<!-- <footer>
+</footer> -->
 
 </html>
