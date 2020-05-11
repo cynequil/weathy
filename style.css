@@ -122,17 +122,12 @@ body{
     font-size: 20px;
 }
 #api{
+    align-self: center;
     position: absolute;
     bottom: 5%;
-    left: 50%;
-    margin-left: -25%;
-    /* right: 5%; */
     font-family: 'Quicksand', sans-serif;
-    font-size: 10px;
+    font-size: 12px;
     color: black;
-    text-align: right;
-    /* padding: 5px; */
-    /* margin-top: 10px; */
     letter-spacing: 1px;
     /* outline: solid 2px red; */
 }
