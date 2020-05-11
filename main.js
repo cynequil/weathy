@@ -18,8 +18,8 @@ function print() {
     let info = response.name + " / " + response.sys.country;
     let a = response.weather[0].icon;
     let imgurl = "https://openweathermap.org/img/wn/" + a + "@2x.png";
-    xTemp.innerHTML = Math.floor(response.main.temp) + "<span id='unit'>°C</span>";
-    xTempFeels.innerText = "Feels like: " + Math.floor(response.main.feels_like) + "°C";
+    xTemp.innerHTML = Math.floor(response.main.temp) + "<sup id='unit'>°C</sup>";
+    xTempFeels.innerHTML = "Feels like: " + Math.floor(response.main.feels_like) + "<sup>°</sup>";
     xWeatherImg.setAttribute('src', imgurl);
     xWeatherDesc.innerHTML = response.weather[0].main;
     xHumidity.innerHTML = "Humidity: " + response.main.humidity + "%";
