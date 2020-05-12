@@ -4,24 +4,23 @@
     margin: 0;
     padding: 0;
     outline: none;
+    box-sizing: border-box;
 }
 :root{
-    --omaps-color1: rgb(211, 211, 211);
-    --omaps-color2: #EA6E4B;
-    --omaps-color3: white;
-    --main-text-color: white;
-    --box-text-color: black;
+    --omaps-color1: #EA6E4B;
+    --omaps-color2: #ffffff;
+    --omaps-color3: #49484A;
+    --omaps-color4: #000000;
 }
 body{
-    /* background-color: var(--omaps-color3); */
     background: url(./zen.jpg) center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* background-color: rgb(0, 0, 0,0.5); */
-    color: var(--main-text-color);
+    color: var(--omaps-color2);
     font-family: 'Dosis', Arial, Helvetica, sans-serif;
 
 }
+/* top elements styling below */
 .top{
     background-color: rgb(0, 0, 0,0.5);
     text-align: center;
@@ -33,26 +32,24 @@ body{
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     font-size: 50px;
-    color: var(--omaps-color2);
-    /* outline: solid 1px black; */
-    text-shadow: 2px 2px white;
+    color: var(--omaps-color1);
+    text-shadow: 2px 2px var(--omaps-color2);
 }
 .desc{
     padding-bottom: 5px;
     font-size: 15px;
-    /* font-weight: bold; */
-    letter-spacing: 1.5px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 .container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 65%;
+    width: 60%;
     margin: 0 auto;
     padding: 5px;
     padding-bottom: 0;
     text-align: center;
-    /* outline: 1px red solid; */
 }
 .datain{
     display: flex;
@@ -67,23 +64,22 @@ body{
     border: none;
     border-radius: 25px;
     background-color: rgb(0, 0, 0,0.5);
-    color: white;
-    /* border-bottom: solid 2px var(--omaps-color2); */
+    color: var(--omaps-color2);
+    border: solid 2px var(--omaps-color1);
 }
 .datain input::placeholder{
     font-size: 22px;
-    color:  rgb(206, 206, 206);
+    color: rgba(156, 156, 156, 0.795);
 }
 #btn{
-    background-color: var(--omaps-color2);
+    background-color: var(--omaps-color1);
+    color: var(--omaps-color2);
     border: none;
     border-radius: 25px;
     font-size: 20px;
     font-weight: bold;
-    /* letter-spacing: 1px; */
-    padding: 10px;
     margin: 10px 0;
-    color: var(--main-text-color);
+    padding: 10px;
 }
 .info{
     margin: 10px 0;
@@ -94,39 +90,40 @@ body{
     color: var(--omaps-color2);
     border-radius: 25px;
     font-weight: bold;
-    border: solid 2px var(--omaps-color2);
-    background-color: rgb(0, 0, 0,0.2);
-    background-color: rgb(255, 255, 255,0.6);
+    border: solid 2px var(--omaps-color1);
+    background-color: rgb(0, 0, 0,0.35);
 }
-.info > div{
-    /* outline: 2px red solid; */
-    /* background-color: black; */
-}
-#temp{
-    grid-column: 1/4;
-    grid-row: 1/3;
-}
+/* main temperature styling */
 #actual{
+    grid-column: 1/3;
+    grid-row: 1/3;
     font-size: 70px;
     font-weight: normal;
 }
 #unit{
     font-size: 40px;
 }
-#feels{
-    font-size: 15px;
-    letter-spacing: 1.5px;
-    padding-left: 0;
+.accent{
+    color: var(--omaps-color3);
 }
 #weather{
     grid-column: 3/5;
     grid-row: 1/3;
 }
-#weather-desc{
+.info-text{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column: 1/5;
+}
+/* feels like temperature styling */
+.info-text #feels{
     font-size: 15px;
     letter-spacing: 1.5px;
 }
-
+.info-text #weather-desc{
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
 #humidity{
     grid-column: 1/5;
     font-size: 22px;
@@ -139,19 +136,15 @@ body{
     letter-spacing: 2.2px;
     font-size: 20px;
 }
+/* last div showing api used styling */
 #api{
-    /* align-self: center;
-    position: absolute;
-    bottom: 5%; */
-    /* margin-top: 20px; */
     padding: 5px;
     padding-top: 10px;
     grid-column: 1/5;
     font-family: 'Quicksand', sans-serif;
     font-size: 11px;
-    color: black;
+    color: var(--omaps-color3);
     text-align: right;
-    /* letter-spacing: 1.5px; */
 }
 #open{
     color: var(--omaps-color2);
@@ -164,7 +157,7 @@ body{
         width: 85%;
     }
     #actual,#feels{
-        text-align: left;
+        text-align: center;
         padding-left: 15px;
     }
 }
