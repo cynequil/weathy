@@ -15,6 +15,11 @@ function print() {
     const response = JSON.parse(Get(url));
     console.log(response);
 
+    if (response.cod === '404') {
+        alert("Sorry!! Unable To Find City (ಥ﹏ಥ)");
+        return;
+    }
+
     let info = response.name + " <span class='accent'>/</span> " + response.sys.country;
     let a = response.weather[0].icon;
     let imgurl = "https://openweathermap.org/img/wn/" + a + "@2x.png";

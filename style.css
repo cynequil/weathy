@@ -13,6 +13,7 @@
     --omaps-color4: #000000;
     --omaps-color5: #CBDDDE;
 }
+/* styling of html tags */
 body{
     background: url(./zen.jpg) center center no-repeat;
     background-size: cover;
@@ -21,6 +22,13 @@ body{
     color: var(--omaps-color2);
     font-family: 'Dosis', Arial, Helvetica, sans-serif;
 
+}
+a,
+a:active,
+a:visited,
+a.hover{
+    text-decoration: none;
+    color: var(--omaps-color2);
 }
 /* top elements styling below */
 .top{
@@ -84,6 +92,7 @@ body{
     padding: 10px;
 }
 .info{
+    position: relative;
     margin: 10px 0;
     padding: 5px;
     display: grid;
@@ -117,7 +126,7 @@ body{
     grid-template-columns: repeat(2,1fr);
     grid-column: 1/5;
 }
-/* feels like temperature styling */
+/* temperature styling feelslike */
 .info-text #feels{
     font-size: 15px;
     letter-spacing: 1.5px;
@@ -151,7 +160,18 @@ body{
 #open{
     color: var(--omaps-color2);
     cursor: pointer;
-    text-decoration: none;
+    /* text-decoration: none; */
+}
+.font-icons{
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.font-icons i{
+    padding: 5px;
 }
 
 @media (max-width: 500px){
