@@ -11,11 +11,13 @@
     --omaps-color2: #ffffff;
     --omaps-color3: #49484A;
     --omaps-color4: #000000;
+    --omaps-color5: #CBDDDE;
 }
 body{
     background: url(./zen.jpg) center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-color: var(--omaps-color5);
     color: var(--omaps-color2);
     font-family: 'Dosis', Arial, Helvetica, sans-serif;
 
